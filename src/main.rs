@@ -61,6 +61,7 @@ impl Database {
 
 impl Drop for Database {
     fn drop(&mut self) {
+        // Flush DB functionality
         let mut contents = String::new();
         for (key, value) in &self.map {
             contents.push_str(key);
