@@ -51,6 +51,7 @@ impl Database {
         return Ok(Database { map });
     }
     fn insert(&mut self, key: String, value: String) {
+        // TODO: Check if key already exists if yes then return error
         self.map.insert(key, value);
     }
 
